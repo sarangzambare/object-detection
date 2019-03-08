@@ -1,4 +1,4 @@
-# object-detection using custom filtering for the YOLOv2 model, with COCO - classes.
+# Object-detection using custom filtering for the YOLOv2 model, with COCO - classes.
 
 
 YOLOv2 (You only look once) is one of the most popular algorithms for object detection. As the name implies, the predictions of objects, and their bounding boxes are calculated as a **single forward pass** through the convolutional neural network, making it suitable for **real time** object detection.
@@ -79,4 +79,15 @@ This approach reduces computational cost, which is of essence particularly in re
 
 ### Visualizing YOLO :
 
-Blah
+In this program, I am using an input images which are preprocessed into being 608x608 pixels. The grid size I am using is 19x19. Hence, the following specifications:
+
+* Input shape is **(m,608,608,3)**, where **m** is the number of images per batch.
+* Number of anchor boxes = **5**
+* Number of classes to predict = **80**
+* Output shape is therefore **(m,19,9,5,85)**
+
+If the output shape is confusing, think about it as returning 5 boxes per block, and each of the 5 boxes has a 85 length vector which consists of [Pc,Bx,By,Bh,Bw, + 80 classes]
+
+Graphically :
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/yolo_arch.png)
