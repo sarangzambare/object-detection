@@ -39,7 +39,7 @@ cow
 
 The training data consists of images labelled with the objects it contains, along with the bounding box for each object. The way this is done is in the form of a vector encoding 6 entities, as given below :
 
-![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/trainingdata.png)
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/trainingdata_2.png)
 
 
 where Bx, By represents the centre of the box, and Bh and Bw are the height and width of the box respectively. The class label c is actually a vector of length 80, representing all the 80 classes.
