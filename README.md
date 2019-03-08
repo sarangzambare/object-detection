@@ -110,3 +110,18 @@ After doing this, if we colour each of the 361 blocks with its predicted class, 
 Another way to visualize what's being predicted is to plot the bounding boxes themselves. Without any filtering, there is a large number of boxes, with many boxes pertaining to the same object :
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/class_boxes_2.png)
+
+
+## Non-max supression and threshold filtering:
+
+As is evident from the above figure, the yolo algorithm outputs many boxes, most of which are irrelevant/redundant.Hence we need a way to filter and chuck out the unneeded boxes.
+
+The first step, quite naturally, is to get rid of all the boxes which have a low probability of an object being detected. This can be done by constructing a boolean mask (**tf.boolean_mask** in tensorflow), and only keeping the boxes which have a probability of more than a certain threshold.
+
+This step gets rid of anamolous detections of objects. However, even after such a filtering, we end up with many boxes for each object detected. But we only need one box. This bounding box is calculated using Non-max supression.
+
+Non-max supression makes use of a concept called "intersection over union" or IoU. It takes as input two boxes, and ss the name implies, calculates the ratio of the intersection and union of the two boxes.
+
+For example, given two boxes A and B , IoU is calculated as :
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/iou.png)
