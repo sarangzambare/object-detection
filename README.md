@@ -137,3 +137,17 @@ This type of filtering makes sure that only one bounding box is returned per obj
 
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/nms.png)
+
+
+## Demonstration : Detecting things around Berkeley:
+
+
+I put this program to test, on footages shot around Berkeley, CA. I chose a time when the weather was good and there was a lot of sun.
+
+The videos were recorded using iPhone 8, and then resized into **1280x720**.
+
+Internally, the program resizes these images into squares of (608,608), as described in the previous sections.
+
+Here are the results :
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/res1.jpeg)
