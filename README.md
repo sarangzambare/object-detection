@@ -125,3 +125,15 @@ Non-max supression makes use of a concept called "intersection over union" or Io
 For example, given two boxes A and B , IoU is calculated as :
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/iou.png)
+
+Having defined the IoU, non-max supression works as follows :
+
+Repeat Until no boxes to process:
+* Select the box with highest probability of detection.
+* Remove all the boxes with a high IoU with the selected box.
+* Mark the selected box as "processed"
+
+This type of filtering makes sure that only one bounding box is returned per object detected. (Exceptions include conditions when there are more than one objects in one grid block, but I omit that case here)
+
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/nms.png)
