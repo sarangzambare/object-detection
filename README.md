@@ -91,3 +91,12 @@ If the output shape is confusing, think about it as returning 5 boxes per block,
 Graphically :
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/yolo_arch.png)
+
+
+To predict objects and their bounding boxes,
+
+* For each of the 361 boxes (19<sup>2</sup>), we calculate probability scores by multiplying Pc by the individual class probabilities.
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/equation_c.png)
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/equation_p.png)
