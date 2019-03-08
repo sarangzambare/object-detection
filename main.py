@@ -506,6 +506,16 @@ def predict(sess, image_file):
 
     return out_scores, out_boxes, out_classes
 
+def get_name_string(n,length=5):
+
+    """
+    Converts a number into 0000n format for reading in frames
+    """
+
+    c = "00000"
+
+    return c[:length-len(str(n))] + str(n)
+
 
 #### Start Session #####
 
@@ -519,4 +529,14 @@ yolo_model = load_model("model/yolo.h5")
 yolo_outputs = yolo_head(yolo_model.output, anchors, len(class_names))
 scores, boxes, classes = yolo_eval(yolo_outputs, image_shape)
 
-out_scores, out_boxes, out_classes = predict(sess, "image1.jpg")
+
+# Change this based on path
+images_path = "scene1/"
+#out_scores, out_boxes, out_classes = predict(sess, "image1.jpg")
+
+
+# For some wierd reason images start with index = 19 in vlc sequencer, sequence ratio = 6
+for i in range(318):
+    file_name = images_path + "obj_det" + get_name_string(19+6*i) + ".jpeg"
+    print("Currently predicting image no. " + str(19+6*i))
+    predict(sess,file_name)
