@@ -149,6 +149,8 @@ This type of filtering makes sure that only one bounding box is returned per obj
 
 I put this program to test, on footages shot around Berkeley, CA. I chose a time when the weather was good and there was a lot of sun.
 
+The pretrained model was trained on images from drive.ai, which were labelled as given in the first section of this article. The model can be found in the folder "model"
+
 The videos were recorded using iPhone 8, and then resized into **1280x720**.
 
 Internally, the program resizes these images into squares of (608,608), as described in the previous sections.
@@ -179,3 +181,10 @@ Some of them are outright stupid, like this one :
 
 
 But overall, even this basic model performs well. Especially regarding important classes like "car" and "person".
+
+
+## References :
+
+1. [You Only Look Once (YOLO): Unified, Real-Time Object Detection, ***Redmon, Divvala, Girshick, Farhadi***](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf)
+
+2. [YAD2K: Yet Another Darknet 2 Keras, Allan Zelener](https://github.com/allanzelener/YAD2K)
