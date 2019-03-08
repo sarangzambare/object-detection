@@ -109,4 +109,4 @@ After doing this, if we colour each of the 361 blocks with its predicted class, 
 
 Another way to visualize what's being predicted is to plot the bounding boxes themselves. Without any filtering, there is a large number of boxes, with many boxes pertaining to the same object :
 
-![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/class_boxes.png)
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/class_boxes_2.png)
