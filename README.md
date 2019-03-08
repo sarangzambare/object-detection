@@ -102,3 +102,7 @@ To predict objects and their bounding boxes,
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/equation_p.png)
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/class_score.png)
+
+After doing this, if we colour each of the 361 blocks with its predicted class, it gives us a nice way to visualize what's being predicted :
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/class_colours.png)
