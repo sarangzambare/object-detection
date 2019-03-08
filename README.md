@@ -1,9 +1,9 @@
 # Object-detection using non-max supression for the YOLOv2 model
 
 
-
+### Sample output : Walking around in Berkeley
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/gif/scene2.gif)
-*Sample output : Walking around in Berkeley*
+
 
 
 YOLOv2 (You only look once) is one of the most popular algorithms for object detection. As the name implies, the predictions of objects, and their bounding boxes are calculated as a **single forward pass** through the convolutional neural network, making it suitable for **real time** object detection.
@@ -173,8 +173,9 @@ If you analyse it frame by frame, you will notice that it still makes a lot of m
 
 Some of them are outright stupid, like this one :
 
-![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/stupid.png)
-*Cellphone ?! Whaa ???*
+### Cellphone ?! Whaa ???
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/stupid.jpeg)
+
 
 
 But overall, even this basic model performs well. Especially regarding important classes like "car" and "person".
