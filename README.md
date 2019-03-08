@@ -64,3 +64,19 @@ Then, each label vector will be of length 30 (Pc, Bx, By, Bw, Bh, +25 classes).
 To have such an output shape, an example architecture will look like :
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/yolo_layers.png)
+
+### Anchor boxes :
+
+Anchor boxes are predefined boxes of fixed height and width. The idea is to use a finite number of anchor boxes, such that any object detected fits snugly inside at least one of the predefined boxes. The reason this is done is to limit the number of possible values of **Bh** and **Bw** (infinite) to only a few predefined values.
+
+Anchor boxes are chosen based on application. The crux of the idea is that different objects fall in different ratios of height and width. For example, if the classes in this program only had "person" and "car" , we could've used only two anchor boxes :
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/car_man.png)
+
+
+This approach reduces computational cost, which is of essence particularly in real-time detection.
+
+
+### Visualizing YOLO :
+
+Blah
