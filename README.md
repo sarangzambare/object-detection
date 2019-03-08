@@ -1,5 +1,7 @@
 # Object-detection using custom filtering for the YOLOv2 model, with COCO - classes.
 
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/gif/scene2.gif)
+
 
 YOLOv2 (You only look once) is one of the most popular algorithms for object detection. As the name implies, the predictions of objects, and their bounding boxes are calculated as a **single forward pass** through the convolutional neural network, making it suitable for **real time** object detection.
 
@@ -155,4 +157,4 @@ Here are the results :
 GIF :
 
 
-![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/gif/scene2.gif)
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/gif/scene1.gif)
