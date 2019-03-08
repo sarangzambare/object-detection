@@ -1,6 +1,9 @@
-# Object-detection using custom filtering for the YOLOv2 model, with COCO - classes.
+# Object-detection using non-max supression for the YOLOv2 model
+
+
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/gif/scene2.gif)
+*Sample output : Walking around in Berkeley*
 
 
 YOLOv2 (You only look once) is one of the most popular algorithms for object detection. As the name implies, the predictions of objects, and their bounding boxes are calculated as a **single forward pass** through the convolutional neural network, making it suitable for **real time** object detection.
@@ -154,7 +157,24 @@ Here are the results :
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/res1.jpeg)
 
-GIF :
+As can be seen in the above image, not all instances of the predicted classes are detected. For example, there are two cars and a bicycle which did not get detected in the above image.
+
+This is because I am using only 5 anchor boxes for simplicity, and not all instances of the classes might fall into the five anchor boxes at every frame of the video.
+
+Feel free to try running the code using more anchor boxes. The heights and widths of the anchor boxes can be modified in the folder "anchors"
+
+Finally, here is a GIF of a video that I passed through this program.
 
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/gif/scene1.gif)
+
+
+If you analyse it frame by frame, you will notice that it still makes a lot of mistakes. Most of the mistakes are in the form of missing out some objects.
+
+Some of them are outright stupid, like this one :
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/stupid.png)
+*Cellphone ?! Whaa ???*
+
+
+But overall, even this basic model performs well. Especially regarding important classes like "car" and "person".
