@@ -151,3 +151,8 @@ Internally, the program resizes these images into squares of (608,608), as descr
 Here are the results :
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/res1.jpeg)
+
+GIF :
+
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/gif/scene2.gif)
