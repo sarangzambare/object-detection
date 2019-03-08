@@ -33,3 +33,10 @@ sheep
 cow
 ...
 ```
+
+
+### Training
+
+The training data consists of images labelled with the objects it contains, along with the bounding box for each object. The way this is done is in the form of a vector encoding 6 entities, as given below :
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/trainingdata.png)
