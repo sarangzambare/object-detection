@@ -100,3 +100,5 @@ To predict objects and their bounding boxes,
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/equation_c.png)
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/equation_p.png)
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/class_score.png)
