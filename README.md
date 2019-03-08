@@ -106,3 +106,7 @@ To predict objects and their bounding boxes,
 After doing this, if we colour each of the 361 blocks with its predicted class, it gives us a nice way to visualize what's being predicted :
 
 ![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/class_colours.png)
+
+Another way to visualize what's being predicted is to plot the bounding boxes themselves. Without any filtering, there is a large number of boxes, with many boxes pertaining to the same object :
+
+![alt text](https://raw.githubusercontent.com/sarangzambare/object-detection/master/png/class_boxes.png)
