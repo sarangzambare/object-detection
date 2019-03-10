@@ -524,18 +524,16 @@ class_names = read_classes("coco_classes.txt")
 anchors = read_anchors("anchors/anchors.txt")
 image_shape = (720., 1280.)
 
-yolo_model = load_model("model/yolo.h5")
+yolo_model = load_model("model/yolo_custom.h5")
 
 yolo_outputs = yolo_head(yolo_model.output, anchors, len(class_names))
 scores, boxes, classes = yolo_eval(yolo_outputs, image_shape)
 
 
-# Change this based on path
+# Change th
 images_path = "scene1/"
 #out_scores, out_boxes, out_classes = predict(sess, "image1.jpg")
 
-
-# For some wierd reason images start with index = 19 in vlc sequencer, sequence ratio = 6
 for i in range(318):
     file_name = images_path + "obj_det" + get_name_string(19+6*i) + ".jpeg"
     print("Currently predicting image no. " + str(19+6*i))
